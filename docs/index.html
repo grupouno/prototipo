@@ -1,232 +1,848 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="author" content="harrnish">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>	Prototipo Grupo 1 </title>
+    
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="estilo2.css" />
+    <link rel="shortcut icon" href="imagenes/firmalivia.png">
+ <style>
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+   .rectangulo{width: 8.5em;
+                height: 12em;
+                border: 2px solid #fff;
+                margin: 3em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                font-weight: 300;
+                }
+  img.zoom {
+    width: 8.5em;
+    height: 12em;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    -ms-transition: all 2s ease-in-out;
+    transition: all 1s;
+    
+}
+ 
+.transition {
+    -webkit-transform: scale(1.8); 
+    -moz-transform: scale(1.8);
+    -o-transform: scale(1.8);
+    transform: scale(1.8);
+   
 
-      <title>Portfolio Website Template | CODEGRID</title>
+}           
+    .volver{position: fixed;
+            top:80%;
+            right:83%;
+            }
+    #volverGeneral{z-index: 650;}        
+   a{filter: brightness(60%);
+      transition: linear 1s;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2em;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+   a:hover{filter: brightness(100%);} 
+   button{filter: brightness(70%);
+      transition: linear .6s;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2em;
+      background: none;
+      border-radius: 7px;
+      border:none;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+   button:hover{filter: brightness(100%);
+                cursor: pointer;} 
+   button:focus{outline: none;}             
+   .bold{font-weight: 700;}
+   .dosObras{display: flex;
+             justify-content: center;
+              align-items: center; }  
+   .unoIdioma{display: flex;
+              flex-direction: column;
+              text-align: center;}
+    h4{color: #fff;
+      font-family: 'Montserrat', 'Century gothic', sans-serif;
+      font-weight: 300;
+      font-size: 1.3em;
+      filter: brightness(55%);
+      margin: .5em;
+      padding-left: .5em;}          
+    h5{color: #fff;
+      font-family: 'Montserrat', 'Century gothic', sans-serif;
+      font-weight: 500;
+      font-size: 1em;
+      filter: brightness(55%);
+      padding-left: 1em;
+      padding-right: 1em;} 
+      
+     .contenedorObras{position: absolute;
+                    bottom: 60%;   } 
+      .contenedorObrasIngles{position: absolute;
+                             bottom: 60%;  } 
+       img{z-index: 100;}
+       .img{z-index: 100;} 
+       .img2{z-index: 120;}
+       .img3{z-index: 122;}
+       .img4{z-index: 123;}         
+       #obra1{position: absolute;
+              bottom: 40%;
+              right: 15%;
+              margin-left: 5em;
+              margin-right: 10em;
+              }
+       #obra2{position: absolute;
+              bottom: 40%;
+              right: 30%;
+              margin-left:8em;
+              margin-right: -2em;}    
+       #obra3{position: absolute;
+              bottom: 40%;
+              left: 45%;
+              margin-left:-.8em;
+              margin-right: 2em;}   
+       #obra4{position: absolute;
+              bottom: 40%;
+              left: 60%;
+              margin-left: 11em;
+              margin-right: 10em;
+              }
+        #img{z-index: 100;
+              }      
+       .boton1{z-index: 150;
+               position: absolute;
+                top:30%;
+                left:42%;
+                cursor: pointer;
+                width: 10em } 
+        .boton2 {z-index: 150;
+               position: absolute;
+                top:-7em;
+                left:2em;
+                padding-left: 3em;
+                padding-bottom: 3em;
+                cursor: pointer; } 
+         .siguiente{z-index: 350;
+               position: absolute;
+                top:10%;
+                left:80%;
+                cursor: pointer;
+                 }           
+         #estrellas{z-index: 150;
+               position: absolute;
+                top:10%;
+                left:1%;
+                }
+        #estrellas1{z-index: 150;
+               position: absolute;
+                top:10%;
+                left:1%;
+                }       
+        #estrellas2{z-index: 150;
+               position: absolute;
+                top:10%;
+                left:1%;
+                }     
+       #volverGeneral{z-index: 250;
+               position: absolute;
+                top:84%;
+                left:1%;
+                }
+      #volverGeneral2{z-index: 250;
+               position: absolute;
+                top:76%;
+                left:1%;
+                }      
+      #volverGeneral3{z-index: 250;
+               position: absolute;
+                top:76%;
+                left:1%;
+                }    
+      #volverGeneral4{z-index: 250;
+               position: absolute;
+                top:76%;
+                left:1%;
+                } 
+      #fin{z-index: 350;
+               position: absolute;
+                top:39%;
+                left:45%;
+                }                                   
+       #volverIdiomas{z-index: 20;
+               position: absolute;
+                top:84%;
+                left:1%;
+                }    
+      #volverObras{z-index: 20;
+               position: absolute;
+                top:84%;
+                left:1%;
+                }                      
+       #siguiente{z-index: 150;
+               position: absolute;
+                top:10%;
+                left:74%;
+                }
+      #siguiente2{z-index: 150;
+               position: absolute;
+                top:10%;
+                left:74%;
+                } 
+      #siguiente3{z-index: 150;
+               position: absolute;
+                top:14%;
+                left:74%;
+                filter: brightness(80%);
+                transition: .6s;
+                }  
+      #siguiente3:hover{
+                filter: brightness(100%);
+                
+                }
+      #siguiente4{z-index: 150;
+               position: absolute;
+                top:14%;
+                left:74%;
+                filter: brightness(80%);
+                transition: .6s;
+                }  
+      #siguiente4:hover{
+                filter: brightness(100%);
+                
+                }
+     #siguiente5{z-index: 150;
+               position: absolute;
+                top:14%;
+                left:74%;
+                filter: brightness(80%);
+                transition: .6s;
+                }  
+      #siguiente5:hover{
+                filter: brightness(100%);
+                
+                }
+       #piezas{z-index: 150;
+               position: absolute;
+                top:19%;
+                left:30%;
+                filter: brightness(80%);
+                transition: .6s;
+                }  
+      #piezas:hover{
+                filter: brightness(100%);
+                
+                }                                                          
+       #hombreUno  {z-index: 150;
+               position: absolute;
+                top:20%;
+                left:29%;
+                width: 60%;
+                }  
+        #hombreDos {z-index: 150;
+               position: absolute;
+                top:25%;
+                left:64%;
+                width: 28%;
+                }                                      
+          .preguntas{position: absolute;
+                      z-index: 503;
+                      top:30%;
+                      left:35%;
+                      background-color: rgba(0, 0, 0, 0.479);
+                      border-radius: 25px;
+                    }      
+         #correcto{position: absolute;
+                      z-index: 124;
+                      top:15%;
+                      left:35%;
+                      width: 3em;
+                    }                      
+         #error{position: absolute;
+                      z-index: 124;
+                      top:15%;
+                      left:35%;
+                      width: 3em; } 
+          .mano{position: absolute;
+                      z-index: 124;
+                      top:50%;
+                      left:35%;
+                     
+                    } 
+          .hombre{position: absolute;
+                      z-index: 204;
+                      top:0;
+                      left:0;
+                     
+                    }    
+           #img5{position: absolute;
 
-      <!-- stylesheet -->
-      <link rel="stylesheet" href="style.css">
+                  width: 100%;
+                  height: 100vh;
+                  display: flex;
+                   align-items: center; }
+           #img7{position: absolute;
+                  width: 100%;
+                  height: 100vh;
+                  display: flex;
+                   align-items: center; }         
+          #rompecabezasVacio{width: 100%;}  
+          #rompecabezasCompleto{width: 100%;}                                                 
+          #seleccione{z-index: 150;
+               position: absolute;
+                top:20%;
+                left:35%;
+                filter: brightness(50%);
+                width: 36em;
+                }  
+            .img{width: 100%;
+                  height: 100vh;
+                  background: cover;} 
 
-      <!-- bootstrap cdns -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-      <!-- google fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
-
-      <!-- terminal effect -->
-      <script src="t.min.js"></script>
-
-      <!-- for on scroll animations -->
-      <link rel="stylesheet" href="animate.css">
-      <script src="wow.min.js"></script>
-
-</head>
-<body>
-      <div class="wrapper">
-
-            <!--------------- navbar starts here --------------->
-            <nav>
-                  <span id="brand">
-                        <a href="index.html">harrnish</a>
-                  </span>
-
-                  <ul id="menu">
-                        <li><a href="index.html">home<span>.</span></a></li>
-                        <li><a href="work.html">work<span>.</span></a></li>
-                        <li><a href="about.html">about me<span>.</span></a></li>
-                        <li><a href="contact.html">contact<span>.</span></a></li>
-                  </ul>
-
-                  <div id="toggle">
-                        <div class="span">menu</div>
-                  </div>
-
-            </nav>
-
-            <div id="resize">
-                  <div class="close-btn">close</div>
-
-                  <ul id="menu">
-                        <li><a href="index.html">home<span>.</span></a></li>
-                        <li><a href="work.html">work<span>.</span></a></li>
-                        <li><a href="about.html">about me<span>.</span></a></li>
-                        <li><a href="contact.html">contact<span>.</span></a></li>
-                  </ul>
-            </div>
-            <!--------------- navbar ends here --------------->
-
-
-
-            <!--------------- hero section starts here --------------->
-            <div class="hero">
-                  <div class="header">
-                        <h1 class="line anim-typewriter">I make brands matter in culture.</h1>
-                  </div>
-            </div>
-
-            <div class="scroll-down"></div>
-            <!--------------- hero section ends here --------------->
-
-
-
-            <!--------------- projects section starts here --------------->
-            <div class="container-fluid">
-                  <br><br><br>
-
-                  <h6>Selected projects</h6>
-
-                  <div class="vertical"></div>
-                  <br>
-
-                  <div class="whitespace"></div>
-                  <div class="whitespace"></div>
-
-                  <div class="row">
-                        <div class="col-lg-8"></div>
-
-                        <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='project.html'"></div>
-                  </div>
-
-                  <div class="whitespace"></div>
-
-                  <div class="row">
-                        <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project.html'"></div>
-
-                        <div class="col-lg-6"></div>
-                  </div>
-
-                  <div class="whitespace"></div>
-
-                  <div class="row">
-                        <div class="col-lg-7"></div>
-
-                        <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project.html'"></div>
-
-                        <div class="col-lg-1"></div>
-                  </div>
-
-                  <div class="whitespace"></div>
-
-                  <div class="row">
-                        <div class="col-lg-1"></div>
-
-                        <div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='project.html'"></div>
-
-                        <div class="col-lg-6"></div>
-                  </div>
-
-                  <div class="whitespace"></div>
-            </div>
-            <!--------------- projects section ends here --------------->
-
-
-
-            <!--------------- footer starts here --------------->
-            <div class="footer">
-                  <div class="container">
-                        <br><br>
-
-                        <div class="collab">
-                              <div class="row">
-                                    <div class="col-lg-12">
-                                          <p class="wow fadeInUp">Got an interesting project? I can help you.</p>
-                                    </div>
-                              </div>
-                        </div>
-
-                        <br>
-
-                        <div class="hr">
-                              <div class="row"></div>
-                        </div>
-
-                        <br><br>
-
-                        <div class="info">
-                              <div class="row">
-                                    <div class="col-lg-4" id="personal">
-                                          <p class="wow fadeInUp">connect with me</p>
-                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s">ig @harrnish</h4>
-                                          <br><br>
-                                    </div>
-
-                                    <div class="col-lg-4" id="media">
-                                          <p class="wow fadeInUp" data-wow-delay="0s">follow me</p>
-
-                                          <ul>
-                                                <li id="fb" class="wow fadeInUp" data-wow-delay="0.4s">fb</li>
-                                                <li id="ig" class="wow fadeInUp" data-wow-delay="0.6s">ig</li>
-                                                <li id="tw" class="wow fadeInUp" data-wow-delay="0.8s">tw</li>
-                                                <li id="yt" class="wow fadeInUp" data-wow-delay="1s">yt</li>
-                                          </ul>
-
-                                          <br><br>
-                                    </div>
-
-                                    <div class="col-lg-4" id="address">
-                                          <p class="wow fadeInUp" data-wow-delay="0s">say hello</p>
-                                          <h4 class="wow fadeInUp" data-wow-delay="0.2s">harrnish@gmail.com</h4>
-                                          <br><br>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </div>
-            <!--------------- footer ends here --------------->
-
-            <br><br><br><br>
-
+                 @media only screen and (max-width: 600px) {body{transform: rotate(90deg);}}                  
+ </style>
+  </head>
+  <body>
+    
+  <div class="unoIdioma">
+      <h4>elija un idioma</h4> 
+      <a id="español" class="idioma" href="#">ESPAÑOL</a>
+      <a id="ingles" class="idioma" href="#">INGLÉS</a>
+  </div>
+  <!-- <img id="seleccione" src="imagenes/seleccione2.png" alt=""> -->
+  <div id="obrasEsp" class="contenedorObras">
+    
+      <div class="dosObras">
+          <a id="obra1" class="obraBototon" href="#"><div id="rectangulo1" class="obra rectangulo">OBRA I</div></a>
+          <a id="obra2" class="obraBototon" href="#"><div id="rectangulo2" class="obra rectangulo">OBRA II</div></a>
+          <a id="obra3" class="obraBototon" href="#"><div id="rectangulo3" class="obra rectangulo">OBRA III</div></a>
+          <a id="obra4" class="obraBototon" href="#"><div id="rectangulo4" class=" obra rectangulo">OBRA IV</div></a>
       </div>
+  </div>   
+  <div id="obrasIng" class="contenedorObrasIngles">
+      <div class="dosObras">
+        <a id="obraIng1" class="obraBototonIng" href="#"><div class="obra rectangulo">ARTWORK I</div></a>
+        <a id="obraIng2" class="obraBototonIng" href="#"><div class="zoom rectangulo">ARTWORK II</div></a>
+        <a id="obraIng3" class="obraBototonIng" href="#"><div class="obra rectangulo">ARTWORK III</div></a>
+        <a id="obraIng4"class="obraBototonIng" href="#"><div class=" obra rectangulo">ARTWORK IV</div></a>
+    </div>
+  </div>
+<div id="img">
+      <div id="img1">
+        <img class="img" src="imagenes/wiframe.jpg" alt="">
+          <button class="boton1" id="boton1"><img class="boton1" src="inicioboton.png" alt=""> </button>
+      </div> 
+      <div id="img2" class="img2">
+        <button class="siguiente" id="siguiente"><img src="imagenes/siguiente.png" alt=""></button>
+          <img id="hombreUno" class="img2 " src="imagenes/hombre1-1.png" alt="">
+      </div> 
+      <div id="img3">
+      
+          <img id="hombreDos" class="img3 hombre" src="imagenes/hompre2-2.png" alt="">
+          <div class="preguntas">
+            <h4 class="bold">¿A qué corriente artística pertenece el autor?</h5>
+              <button id="cubismo"><h5>A. Cubismo</h5></button>
+              <button id="expresionismo"><h5>B. Expresionismo</h5></button>
+              <button id="impresionismo"><h5>C. Impresionismo</h5></button>
+        
 
-      <!-- greensock cdn -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+            </div>
+            <img clase="resultado" id="correcto" src="imagenes/correcto.png" alt="">
+            <img clase="resultado" id="error" src="imagenes/error.png" alt="">
+      </div> 
+      <div id="img4">
+        <button class="siguiente" id="siguiente2"><img src="imagenes/siguiente.png" alt=""></button>
+          <img class="img4 mano" src="imagenes/mano.png" alt="">
+      </div> 
 
-      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-      <script type="text/javascript">
+      <img id="estrellas2" src="imagenes/estrellas2.png" alt="">
+      <img id="estrellas1" src="imagenes/estrella1.png" alt="">
+      <img id="estrellas" src="imagenes/estrellas.png" alt="">
+    <button id="volverGeneral"> <img id="volverGeneralImagen" src="volver.png" alt=""></button>
+</div>
 
-      // navigation starts here
+<div id="img5">
+  <img id="rompecabezasVacio" src="imagenes/9.jpg" alt="">
+  <button id="volverGeneral2"> <img id="volverGeneralImagen2" src="volver.png" alt=""></button>
+  <button class="siguiente" id="siguiente3"><img src="imagenes/siguiente.png" alt=""></button>
+</div>
+<div id="img6">
+  <img id="rompecabezasVacio" src="imagenes/10.jpg" alt="">
+  <button id="volverGeneral3"> <img id="volverGeneralImagen3" src="volver.png" alt=""></button>
+  <!--<button class="siguiente" id="siguiente4"><img src="imagenes/siguiente.png" alt=""></button>
+--> <button class="piezas" id="piezas"><img src="imagenes/piezas.png" alt=""></button> 
+</div>
+<div id="img7">
+  <img id="rompecabezasCompleto" src="imagenes/11.jpg" alt="">
+  <button id="volverGeneral4"> <img id="volverGeneralImagen4" src="volver.png" alt=""></button>
+  
+</div>
+<button id="fin"><img id="finImagen" src="imagenes/fin.png" alt=""></button>
+<button id="volverIdiomas" class="volver" href=""><img src="volver.png" alt=""></button>
 
-      $("#toggle").click(function() {
-            $(this).toggleClass('on');
-            $("#resize").toggleClass("active");
-      });
+<button id="volverObras" class="volver" href=""><img src="volver.png" alt=""></button>
 
-      $("#resize ul li a").click(function() {
-            $(this).toggleClass('on');
-            $("#resize").toggleClass("active");
-      });
+ <!------------------MENU---------------------->
 
-      $(".close-btn").click(function() {
-            $(this).toggleClass('on');
-            $("#resize").toggleClass("active");
-      });
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	
+ <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+      $('#obrasEsp').hide();
+      $('#obrasIng').hide();
+      $('#volverIdiomas').hide();
+      $('#volverObras').hide();
+      $('#img').hide();
+      $('#img2').hide();
+      $('#img3').hide();
+      $('#img4').hide();
+      $('#estrellas').hide();
+      $('#estrellas1').hide();
+      $('#estrellas2').hide();
+      $('#correcto').hide();
+      $('#error').hide();
+      $('#img5').hide();
+      $('#img6').hide();
+      $('#img7').hide();
+      $('#seleccione').hide();
+      $('#fin').hide();
 
-      // navigation ends here
+       $(document).ready(function(){
+         $('#español').click(function(){
+            $('.unoIdioma').fadeOut("slow");
+            $('.contenedorObras').css('bottom', '35%')
+            $('#obrasEsp').fadeIn("90000");
+            $('#volverIdiomas').fadeIn("slow");
+            setTimeout(function() {
+               $("#seleccione").fadeIn("slow");
+             },500);
+        
+             setTimeout(function() {
+              $("#seleccione").fadeOut("slow");
+             },2000);
+         
+           
+            $('#volverIdiomas').click(function(){
+              $('.unoIdioma').fadeIn("slow");
+              $('#obrasEsp').fadeOut("90000");
+              $('#volverIdiomas').fadeOut("slow");
+            });
+         });
+       }); 
 
-      // nav animation
+         $('#ingles').click(function(){
+            $('.unoIdioma').fadeOut("slow");
+            $('.contenedorObrasIngles').css('bottom', '35%')
+            $('#obrasIng').fadeIn("90000");
+            $('#volverIdiomas').fadeIn("slow");
 
-      TweenMax.from("#brand", 1, {
-            delay: 0.4,
-            y: 10,
-            opacity: 0,
-            ease: Expo.easeInOut
-      })
+            $('#volverIdiomas').click(function(){
+              $('.unoIdioma').fadeIn("slow");
+              $('#obrasIng').fadeOut("90000");
+              $('#volverIdiomas').fadeOut("slow");
+            });            
+         });
+      
+        $('#obra1').click(function(){
+            $('#obra2').fadeOut("slow");
+            $('#obra3').fadeOut("slow");
+            $('#obra4').fadeOut("slow");
+            $('#rectangulo1').animate({width:"100vw", height:"20em", opacity:"1"});
+            $('#obra1').css({"margin-left":"35em","margin-right":"-25em"});
+            $('#volverIdiomas').fadeOut("slow");
+            $('#volverObras').fadeIn("slow");
+            $("#seleccione").fadeOut("slow");
+         setTimeout(function() {
+               $("#img").fadeIn("slow");
+         },600);
+        
+         setTimeout(function() {
+               $("#obra1").fadeOut("slow");
+         },600);
+         });
+           
+       
+        $('#obra2').click(function(){
+            $('#obra1').fadeOut("slow");
+            $('#obra3').fadeOut("slow");
+            $('#obra4').fadeOut("slow");
+            $('#rectangulo2').animate({width:"100vw", height:"20em", opacity:"1"});
+            $('#obra2').css({"margin-left":"15em","margin-right":"-23em"});
+            $('#volverIdiomas').fadeOut("slow");
+            $('#volverObras').fadeIn("slow");
+            setTimeout(function() {
+                  $("#img").fadeIn("slow");
+             },600);
+        
+             setTimeout(function() {
+                  $("#obra2").fadeOut("slow");
+            },600);
+            });
 
-      TweenMax.staggerFrom("#menu li a", 1, {
-            delay: 0.4,
-            opacity: 0,
-            ease: Expo.easeInOut
-      }, 0.1);
 
-      // nav animation ends
+ 
+        $('#obra3').click(function(){
+            $('#obra1').fadeOut("slow");
+            $('#obra2').fadeOut("slow");
+            $('#obra4').fadeOut("slow");
+            $('#rectangulo3').animate({width:"100vw", height:"20em", opacity:"1"});
+            $('#obra3').css({"margin-left":"-21em","margin-right":"2em"});
+            $('#volverIdiomas').fadeOut("slow");
+            $('#volverObras').fadeIn("slow");
+            setTimeout(function() {
+                  $("#img").fadeIn("slow");
+             },600);
+        
+             setTimeout(function() {
+                  $("#obra3").fadeOut("slow");
+            },600);
+            });
+        
+        $('#obra4').click(function(){
+            $('#obra1').fadeOut("slow");
+            $('#obra2').fadeOut("slow");
+            $('#obra3').fadeOut("slow");
+            $('#rectangulo4').animate({width:"100vw", height:"20em", opacity:"1"});
+            $('#obra4').css({"margin-left":"-23em","margin-right":"10em"});
+            $('#volverIdiomas').fadeOut("slow");
+            $('#volverObras').fadeIn("slow");
+            setTimeout(function() {
+                  $("#img").fadeIn("slow");
+             },500);
+        
+             setTimeout(function() {
+                  $("#obra4").fadeOut("slow");
+            },500);
+            });  
+                              
+         $('#volverObras').click(function(){
+              $('#obra1').fadeIn("slow");
+              $('#obra2').fadeIn("slow");
+              $('#obra3').fadeIn("slow");
+              $('#obra4').fadeIn("slow");
+              $('#rectangulo1').animate({width:"8.5em", height:"12em"});
+              $('#obra1').css({"margin-left":"5em","margin-right":"10em"});
+              $('#rectangulo2').animate({width:"8.5em", height:"12em"});
+              $('#obra2').css({"margin-left":"8em","margin-right":"-2em"});
+              $('#rectangulo3').animate({width:"8.5em", height:"12em"});
+              $('#obra3').css({"margin-left":"-.8em","margin-right":"2em"});
+              $('#rectangulo4').animate({width:"8.5em", height:"12em"});
+              $('#obra4').css({"margin-left":"11em","margin-right":"10em"});
+              $('#volverObras').fadeOut("slow");
+              $('#volverIdiomas').fadeIn("slow");
+             
 
-      new WOW().init();
+            });
+       
+         $('#volverGeneral').click(function(){
+           $("#img").fadeOut("slow");
+           $('#obra1').fadeIn("slow");
+           $('#obra2').fadeIn("slow");
+            $('#obra3').fadeIn("slow");
+            $('#obra4').fadeIn("slow");
+            $('#rectangulo1').animate({width:"8.5em", height:"12em"});
+            $('#obra1').css({"margin-left":"5em","margin-right":"10em"});
+            $('#rectangulo2').animate({width:"8.5em", height:"12em"});
+            $('#obra2').css({"margin-left":"8em","margin-right":"-2em"});
+            $('#rectangulo3').animate({width:"8.5em", height:"12em"});
+            $('#obra3').css({"margin-left":"-.8em","margin-right":"2em"});
+            $('#rectangulo4').animate({width:"8.5em", height:"12em"});
+            $('#obra4').css({"margin-left":"11em","margin-right":"10em"});
+            $('#estrellas').fadeOut("slow");
+            $('#volverGeneral').fadeOut( "slow");
+            
+          
+         });
+         $('#volverGeneral2').click(function(){
+           $("#img").fadeOut("slow");
+           $("#img5").fadeOut("slow");
+           $('#obra1').fadeIn("slow");
+           $('#obra2').fadeIn("slow");
+            $('#obra3').fadeIn("slow");
+            $('#obra4').fadeIn("slow");
+            $('#rectangulo1').animate({width:"8.5em", height:"12em"});
+            $('#obra1').css({"margin-left":"5em","margin-right":"10em"});
+            $('#rectangulo2').animate({width:"8.5em", height:"12em"});
+            $('#obra2').css({"margin-left":"8em","margin-right":"-2em"});
+            $('#rectangulo3').animate({width:"8.5em", height:"12em"});
+            $('#obra3').css({"margin-left":"-.8em","margin-right":"2em"});
+            $('#rectangulo4').animate({width:"8.5em", height:"12em"});
+            $('#obra4').css({"margin-left":"11em","margin-right":"10em"});
+            $('#estrellas').fadeOut("slow");
+            $('#volverGeneral').fadeOut( "slow");
+          
+         });
+         $('#volverGeneral3').click(function(){
+           $("#img").fadeOut("slow");
+           $("#img6").fadeOut("slow");
+           $('#obra1').fadeIn("slow");
+           $('#obra2').fadeIn("slow");
+            $('#obra3').fadeIn("slow");
+            $('#obra4').fadeIn("slow");
+            $('#rectangulo1').animate({width:"8.5em", height:"12em"});
+            $('#obra1').css({"margin-left":"5em","margin-right":"10em"});
+            $('#rectangulo2').animate({width:"8.5em", height:"12em"});
+            $('#obra2').css({"margin-left":"8em","margin-right":"-2em"});
+            $('#rectangulo3').animate({width:"8.5em", height:"12em"});
+            $('#obra3').css({"margin-left":"-.8em","margin-right":"2em"});
+            $('#rectangulo4').animate({width:"8.5em", height:"12em"});
+            $('#obra4').css({"margin-left":"11em","margin-right":"10em"});
+            $('#estrellas').fadeOut("slow");
+            $('#volverGeneral').fadeOut( "slow");
+            $('#volverGeneral2').fadeOut( "slow");
+          
+         });
+         $('#volverGeneral4').click(function(){
+           $("#img").fadeOut("slow");
+           $("#img5").fadeOut("slow");
+           $("#img7").fadeOut("slow");
+           $('#obra1').fadeIn("slow");
+           $('#obra2').fadeIn("slow");
+            $('#obra3').fadeIn("slow");
+            $('#obra4').fadeIn("slow");
+            $('#rectangulo1').animate({width:"8.5em", height:"12em"});
+            $('#obra1').css({"margin-left":"5em","margin-right":"10em"});
+            $('#rectangulo2').animate({width:"8.5em", height:"12em"});
+            $('#obra2').css({"margin-left":"8em","margin-right":"-2em"});
+            $('#rectangulo3').animate({width:"8.5em", height:"12em"});
+            $('#obra3').css({"margin-left":"-.8em","margin-right":"2em"});
+            $('#rectangulo4').animate({width:"8.5em", height:"12em"});
+            $('#obra4').css({"margin-left":"11em","margin-right":"10em"});
+            $('#estrellas').fadeOut("slow");
+            $('#volverGeneral').fadeOut( "slow");
+            $('#volverGeneral2').fadeOut( "slow");
+            $('#volverGeneral3').fadeOut( "slow");
+            $('#fin').fadeOut( "slow");
+         });
 
-      </script>
-</body>
+
+         $('#boton1').click(function(){
+          $("#img2").fadeIn("slow");
+          $("#boton1").fadeOut("slow");  
+        
+          setTimeout(function() {
+               $("#estrellas").fadeIn(1500);
+         },1200);
+         setTimeout(function() {
+               $("#siguiente").fadeIn(1500);
+         },2500);});
+         $('#siguiente').click(function(){
+          $("#img2").fadeOut("slow");
+          $("#img3").fadeIn("slow");
+         }); 
+            
+
+         $('#cubismo').click(function(){
+           $("#error").fadeIn("slow");
+           setTimeout(function() {
+               $("#estrellas").fadeOut("slow");
+         },500);
+         setTimeout(function() {
+               $("#estrellas2").fadeIn("slow");
+         },500);
+            $('#impresionismo').click(function(){
+             
+              setTimeout(function() {
+                  $("#estrellas2").fadeOut("slow");
+            },500);
+            setTimeout(function() {
+                  $("#estrellas1").fadeIn("slow");
+            },500);
+            }); 
+         }); 
+
+         $('#impresionismo').click(function(){
+           $("#error").fadeIn("slow");
+           setTimeout(function() {
+               $("#estrellas").fadeOut("slow");
+         },500);
+         setTimeout(function() {
+               $("#estrellas2").fadeIn("slow");
+         },500);
+            $('#cubismo').click(function(){
+             
+              setTimeout(function() {
+                  $("#estrellas2").fadeOut("slow");
+            },500);
+            setTimeout(function() {
+                  $("#estrellas1").fadeIn("slow");
+            },500);
+            }); 
+         }); 
+
+         $('#expresionismo').click(function(){
+           $("#correcto").fadeIn("slow");
+           $("#error").fadeOut("slow");
+        
+         setTimeout(function() {
+               $("#img4").fadeIn("slow");
+         },700);
+         }); 
+         $('#siguiente2').click(function(){
+          $("#img5").fadeIn("slow");
+          $('#img4').fadeOut("slow");
+          $('#img').fadeOut("slow");
+          $('#volverGeneral').fadeOut("slow");
+          $('#volverIdiomas').fadeOut("slow");
+          $('#volverObras').fadeOut("slow");
+         });
+         $('#siguiente3').click(function(){
+          $("#img6").fadeIn("slow");
+          $('#img5').fadeOut("slow");
+         });
+         $('#piezas').click(function(){
+          $("#img7").fadeIn("slow");
+          $('#img6').fadeOut("slow");
+          setTimeout(function() {
+               $("#fin").fadeIn("slow");
+         },1000);
+         $('#fin').click(function(){
+           $("#img").fadeOut("slow");
+           $("#img5").fadeOut("slow");
+           $("#img7").fadeOut("slow");
+           $('#obra1').fadeIn("slow");
+           $('#obra2').fadeIn("slow");
+            $('#obra3').fadeIn("slow");
+            $('#obra4').fadeIn("slow");
+            $('#rectangulo1').animate({width:"8.5em", height:"12em"});
+            $('#obra1').css({"margin-left":"5em","margin-right":"10em"});
+            $('#rectangulo2').animate({width:"8.5em", height:"12em"});
+            $('#obra2').css({"margin-left":"8em","margin-right":"-2em"});
+            $('#rectangulo3').animate({width:"8.5em", height:"12em"});
+            $('#obra3').css({"margin-left":"-.8em","margin-right":"2em"});
+            $('#rectangulo4').animate({width:"8.5em", height:"12em"});
+            $('#obra4').css({"margin-left":"11em","margin-right":"10em"});
+            $('#estrellas').fadeOut("slow");
+            $('#volverGeneral').fadeOut( "slow");
+            $('#volverGeneral2').fadeOut( "slow");
+            $('#volverGeneral3').fadeOut( "slow");
+            $('#fin').fadeOut( "slow");
+                          $('.unoIdioma').fadeIn("slow");
+              $('#obrasEsp').fadeOut("90000");
+              $('#volverIdiomas').fadeOut("slow");
+         });
+
+         });
+  </script>
+  <!------------------FIN MENU---------------------->
+   <!------------------FONDO---------------------->
+    <script src="three.min.js"></script>
+    <script src="postprocessing.min.js"></script>
+    <script>
+      let scene, camera, cloudParticles = [],composer;
+
+      function init() {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,1000);
+        camera.position.z = 1;
+        camera.rotation.x = 1.16;
+        camera.rotation.y = -0.12;
+        camera.rotation.z = 0.27;
+
+        let ambient = new THREE.AmbientLight(0x000000);
+        scene.add(ambient);
+
+        let directionalLight = new THREE.DirectionalLight(0x555555);
+        directionalLight.position.set(0,0,1);
+        scene.add(directionalLight);
+
+        let orangeLight = new THREE.PointLight(0x555555,50,120,2.2);
+        orangeLight.position.set(100,300,100);
+        scene.add(orangeLight);
+        let redLight = new THREE.PointLight(0x555555,20,480,2.7);
+        redLight.position.set(100,300,100);
+        scene.add(redLight);
+        let blueLight = new THREE.PointLight(0x00000,20,420,1.7);
+        blueLight.position.set(300,300,200);
+        scene.add(blueLight);
+
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth,window.innerHeight);
+        scene.fog = new THREE.FogExp2(0x00000, 0.001);
+        renderer.setClearColor(scene.fog.color);
+        document.body.appendChild(renderer.domElement);
+
+        let loader = new THREE.TextureLoader();
+        loader.load("smoke.png", function(texture){
+          cloudGeo = new THREE.PlaneBufferGeometry(500,500);
+          cloudMaterial = new THREE.MeshLambertMaterial({
+            map:texture,
+            transparent: true
+          });
+
+          for(let p=0; p<50; p++) {
+            let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
+            cloud.position.set(
+              Math.random()*1020 -400,
+              500,
+              Math.random()*500-500
+            );
+            cloud.rotation.x = 1.16;
+            cloud.rotation.y = -0.12;
+            cloud.rotation.z = Math.random()*2*Math.PI;
+            cloud.material.opacity = 0.20;
+            cloudParticles.push(cloud);
+            scene.add(cloud);
+          }
+        });
+        loader.load("stars.jpg", function(texture){
+
+          const textureEffect = new POSTPROCESSING.TextureEffect({
+            blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
+            texture: texture
+          });
+          textureEffect.blendMode.opacity.value = 0.02;
+
+          const bloomEffect = new POSTPROCESSING.BloomEffect({
+                blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
+                kernelSize: POSTPROCESSING.KernelSize.SMALL,
+                useLuminanceFilter: true,
+                luminanceThreshold: 0.3,
+                luminanceSmoothing: 0.75
+              });
+          bloomEffect.blendMode.opacity.value = 1.5;
+
+          let effectPass = new POSTPROCESSING.EffectPass(
+            camera,
+            bloomEffect,
+            textureEffect
+          );
+          effectPass.renderToScreen = true;
+
+          composer = new POSTPROCESSING.EffectComposer(renderer);
+          composer.addPass(new POSTPROCESSING.RenderPass(scene, camera));
+          composer.addPass(effectPass);
+          
+          window.addEventListener("resize", onWindowResize, false);
+          render();
+        });
+      }
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+      function render() {
+        cloudParticles.forEach(p => {
+          p.rotation.z -=0.003;
+        });
+        composer.render(0.1);
+        requestAnimationFrame(render);
+      }
+      init();
+    </script>
+    <!----------------FIN FONDO-------------------------->
+  </body>
 </html>
